@@ -1,0 +1,21 @@
+#include <string>
+
+int main() {
+    std::string girilenSifre;
+    const std::string dogruSifre = "1234";  // Buraya istediğin şifreyi yazabilirsin
+
+    std::cout << "Şifreyi giriniz: ";
+
+    while (true) {
+        std::getline(std::cin, girilenSifre);
+
+        if (girilenSifre == dogruSifre) {
+            std::cout << "Şifre doğru! Hoşgeldiniz.\n";
+            break;  // Döngüden çık
+        } else {
+            std::cout << "Yanlış şifre, tekrar deneyin: ";
+        }
+    }
+
+    return 0;
+}
